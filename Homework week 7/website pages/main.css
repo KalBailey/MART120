@@ -1,0 +1,18 @@
+body {
+      background-color: brown;
+}
+
+p{
+  font-family: courier;
+  color: ghostwhite;
+  font-size: 20;
+}
+
+.links{
+    font-family: courier;
+    color: gainsboro;
+}
+
+#page_2{
+    background-image: url('walt.jpg');
+}
