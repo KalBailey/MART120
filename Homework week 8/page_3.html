@@ -1,0 +1,73 @@
+<html>
+  <title>Page 3</title>
+  <head>
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+      <link rel="stylesheet" type="text/css" href="main.css">
+      <style>
+          h3{
+              font-family: fantasy;
+              color: gainsboro;
+          }
+          h1{
+              font-family: fantasy;
+              color: gainsboro;
+          }
+      </style>
+      <script>
+          function checkForm()
+          {
+              var email;
+              email = document.getElementById("Email").value;
+              if(email == "")
+              {
+                document.getElementById("Email").style.backgroundColor = "red";
+                document.getElementById("Email").focus();
+              }
+              else
+              {
+                document.getElementById("Email").style.backgroundColor = "white";
+              }
+
+              var lname;
+              lname = document.getElementById("lName").value;
+              if(lname == "")
+              {
+                document.getElementById("lName").style.backgroundColor = "red";
+                document.getElementById("lName").focus();
+              }
+              else
+              {
+                document.getElementById("lName").style.backgroundColor = "white";
+              }
+
+              var fname;
+              fname = document.getElementById("fName").value;
+              if(fname == "")
+              {
+                document.getElementById("fName").style.backgroundColor = "red";
+                document.getElementById("fName").focus();
+              }
+              else
+              {
+                document.getElementById("fName").style.backgroundColor = "white";
+              }
+          }
+      </script>
+  </head>
+  <body>
+      <h1>Contact Us</h1>
+      <form>
+          <p>First Name: <input type="text" id="fName"><br>
+          <p>Last Name: <input type="text" id="lName"><br>
+          <p>Email: <input type="text" id="Email"></p>
+          <h3>Accept Terms of Agreement</h3>
+          <input type="checkbox" required/>
+          <label for="Yes">Yes</label><br>
+          <p></p>
+          <button class = "btn btn-primary" onClick="checkForm()">Submit My Info</button><br>
+          <p></p>
+      </form>
+
+      <a class="links"href="page_2.html">Previous Page</a>
+  </body>
+</html>

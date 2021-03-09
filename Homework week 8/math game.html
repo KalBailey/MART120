@@ -1,0 +1,46 @@
+<html>
+  <head>
+    <title>Math Game</title>
+        <script>
+          var actualAnswer;
+          var number1, number2;
+          
+          function printQuestion()
+          {
+            for(var i = 0; i < 5; i++)
+            {
+              number1 = Math.floor(Math.random() * 10);
+              number2 = Math.floor(Math.random() * 10);
+            }
+
+            actualAnswer = number1 + number2;
+            document.getElementById("question").innerHTML = "What is " + number1 + "+" + number2 + "?";
+          }
+
+          function checkanswer()
+          {
+              var myAnswer = document.getElementById("answer").value;
+              if(myAnswer == actualAnswer)
+              {
+                document.getElementById("message").innerHTML = "Correct! The answer is " + myAnswer;
+                document.getElementById("answer").value = "";
+                printQuestion();
+              }
+              else
+              {
+                document.getElementById("message").innerHTML = "Incorrect. The answer is " + actualAnswer;
+              }
+          }
+        </script>
+  </head>
+
+  <body onload="printQuestion()">
+    <p></p>
+    &nbsp;
+    <div id="question"></div>
+    <br> &nbsp;Your Answer <input type="input" id="answer"><br> &nbsp;
+    <button id="mySubmit" onClick="checkanswer();">Submit</button>
+    <br> &nbsp;
+    <div id="message"></div>
+  </body>
+</html>
